@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serpientes y Escaleras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="intro-page">
+        <h1>Serpientes y Escaleras</h1>
+        <h2>Instrucciones del Juego</h2>
+        <h3>🎲 Objetivo del juego</h3>
+        <p>Llegar primero a la última casilla del tablero (normalmente la 100) avanzando con la ayuda de las escaleras y evitando bajar con las serpientes.</p>
+        <h3>👥 Número de jugadores</h3>
+        <p>De 2 a 4 (o más, depende del tablero).</p>
+        <h3>🪜🐍 Materiales</h3>
+        <ul>
+            <li>Un tablero de Serpientes y Escaleras con casillas numeradas (1 a 100).</li>
+            <li>Un dado.</li>
+            <li>Una ficha por jugador (para diferenciar quién es quién).</li>
+        </ul>
+        <h3>📌 Reglas del juego</h3>
+        <ul>
+            <li><b>Inicio:</b> Todos los jugadores colocan su ficha en la casilla 1.</li>
+            <li><b>Turnos:</b> Cada jugador tira el dado y avanza su ficha tantas casillas como el número que haya salido.</li>
+            <li><b>Escaleras:</b> Si caes en una casilla con la base de una escalera, subes directamente hasta la parte superior de esa escalera.</li>
+            <li><b>Serpientes:</b> Si caes en la cabeza de una serpiente, bajas hasta la casilla donde termina la cola.</li>
+            <li><b>Casilla exacta:</b> Para ganar, debes caer exactamente en la última casilla (ejemplo: la 100). Si te pasas, no avanzas y esperas a tu siguiente turno.</li>
+            <li><b>Ganador:</b> Gana el primer jugador que llegue a la última casilla.</li>
+        </ul>
+        <button id="start-game-btn" class="btn">Iniciar juego</button>
+    </div>
+
+    <div class="game-container" id="game-page">
+        <div class="main-game-area">
+            <h1 id="game-title">Serpientes y Escaleras</h1>
+            <div id="board"></div>
+            <div class="controls">
+                <button id="roll-dice-btn" class="btn">Lanzar dado</button>
+                <div id="status">Es el turno del Jugador 1</div>
+            </div>
+        </div>
+        <div class="chat-container">
+            <div class="chat-header">Asistente de Juego</div>
+            <div class="chat-messages" id="chat-messages"></div>
+            <form id="chat-form" class="chat-input-form">
+                <input type="text" id="chat-input" placeholder="Pregunta al asistente..." autocomplete="off">
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
